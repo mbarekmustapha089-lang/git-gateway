@@ -1,0 +1,6 @@
+{
+  "name": "TH Sportwelt",
+  "description": "TH Sportwelt – Dein Fußball- & Teamsport-Spezialist in Deutschland.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

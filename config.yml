@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Media files stored in the repository
+media_folder: "public/images/uploads"
+# Public URL path for accessing uploaded media
+public_folder: "/images/uploads"
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    label_singular: "Article"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "number", value_type: "float", min: 0 }
+      - { label: "Brand / Marke", name: "brand", widget: "select", options: ["Nike", "adidas", "Puma", "Craft", "Joma", "Jako", "Erima", "Derbystar", "Uhlsport", "Sportwelt"], required: false }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
